@@ -55,7 +55,7 @@ def editarPessoa(id, pessoa):
     sql = "UPDATE pessoas SET nome = %s, idade = %s, cpf = %s, cel = %s WHERE id = %s"
 
     # valores
-    val = (pessoa.nome, pessoa.idade, pessoa.cpf, pessoa.cel)
+    val = (pessoa.nome, pessoa.idade, pessoa.cpf, pessoa.cel, id)
 
     # executa ação
     mycursor.execute(sql, val)
