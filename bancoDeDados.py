@@ -76,3 +76,15 @@ def deletarPessoa(id):
 
     # efetiva a execução no DB
     mydb.commit()
+
+
+def deletarPessoa(id):
+    # comando
+    sql = "DELETE FROM pessoas WHERE id = %s"
+    val = (id,)
+    
+    # executa ação
+    mycursor.execute(sql, val)
+
+    # efetiva a execução no DB
+    mydb.commit()
