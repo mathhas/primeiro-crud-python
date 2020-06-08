@@ -11,7 +11,9 @@ def validaInt(txt=''):
 
 
 def inputString(txt):
-    texto = str(input(f'Digite o {txt} da pessoa: '))
+    texto = str()
+    while len(texto) <= 0:
+        texto = str(input(f'Digite o {txt} da pessoa: ')).strip()
     return texto
 
 
@@ -22,6 +24,7 @@ def escolhaMenu():
         escolha = str(
             input('\nEscolha uma válida para continuar com o programa! tente novamente: ')).strip().upper()
     return escolha
+
 
 def menu():
     print('1 - Cadastrar pessoa')
